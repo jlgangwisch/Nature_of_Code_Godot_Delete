@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_04_ParticleSystems/Example_4_4_SystemofSystems/ParticleSystem_4_4.gd" type="Script" id=1]
+
+
+
+
+[node name="Particle System" type="Node2D"]
+script = ExtResource( 1 )

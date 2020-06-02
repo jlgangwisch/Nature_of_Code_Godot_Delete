@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_04_ParticleSystems/Example_4_5_ParticleSystemwPolymorphism/ParticleSystem_4_5.gd" type="Script" id=1]
+
+
+[node name="ParticleSystem" type="Node2D"]
+position = Vector2( 512, 100 )
+script = ExtResource( 1 )
