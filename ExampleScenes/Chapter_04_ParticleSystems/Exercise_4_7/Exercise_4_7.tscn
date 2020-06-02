@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_04_ParticleSystems/Exercise_4_7/Confetti_e4_7.gd" type="Script" id=1]
+
+
+[node name="Confetti" type="Node2D"]
+position = Vector2( 512, 100 )
+script = ExtResource( 1 )
