@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_05_GodotPhysics/Example_05_06_joints/Example_5_6.gd" type="Script" id=1]
+
+[node name="Example_5_6" type="Node2D"]
+script = ExtResource( 1 )
+bias = 1.0
+damping = 1.0
+stiffness = 100

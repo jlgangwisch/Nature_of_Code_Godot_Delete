@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_05_GodotPhysics/Exercise_05_03_WaveGround/Ball_Rigid_Body2d_5_3.gd" type="Script" id=1]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource( 1 )

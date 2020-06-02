@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node2D
+
+const GRAVITY = 1.0
+onready var spring = get_node(\"Spring\")
+onready var bob = get_node(\"Bob\")
+
+func _process(delta):
+	var gravity = Vector2(0,GRAVITY)
+	bob.add_force(Vector2(0,0), gravity)
+	
+	
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends StaticBody2D
+
+#class_name Static_Platform_5_7
+
+var extents = Vector2(10,10)
+
+var shape = RectangleShape2D.new()
+var collision = CollisionShape2D.new()
+
+func _ready():
+	shape.extents = extents
+	collision.set_shape(shape)
+	add_child(collision)
+
+func _process(delta):
+	update()
+func _draw():
+	var pos = -extents
+	var size = extents*2
+	var rect = Rect2(pos, size)
+	var center = Vector2(0,0)
+	var color = Color(0,1,0,0.5)
+	#draw_circle_arc(center, radius, 0, PI, color)
+	draw_rect(rect, color)
+"
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends RigidBody2D
+
+#class_name Ball_5_7
+onready var collision = get_node(\"CollisionShape2D\")
+var shape = CircleShape2D.new()
+var size = 10
+
+var mouse_drag = false
+var mouse_click = false
+
+
+export var normal_color = Color(1,1,1)
+export var hover_color = Color (0,1,1)
+
+var circle_color = normal_color
+
+func _ready():
+	collision.shape.radius = size
+	
+
+
+
+func _physics_process(delta):
+	if Input.is_action_pressed(\"left_mouse\"):
+		RigidBody2D.MODE_STATIC
+		global_transform.origin = get_global_mouse_position() - get_parent().position
+	else:
+		RigidBody2D.MODE_RIGID
+	update()
+	
+func _draw():
+	draw_circle(Vector2(0,0), 10, circle_color)
+	draw_line(Vector2(0,0), Vector2(10,0), Color(1,0,0))
+
+
+func _on_Bob_mouse_entered():
+	circle_color = hover_color
+	print (mouse_drag)
+
+
+func _on_Bob_mouse_exited():
+		circle_color = normal_color
+		print (mouse_drag)
+
+
+func _on_Bob_input_event(viewport, event, shape_idx):
+	if (event is InputEventMouseButton):
+		if event.is_pressed():
+			mouse_drag = true
+			print (mouse_drag)
+		else:
+			mouse_drag = false
+			print (mouse_drag)
+			
+
+
+"
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends DampedSpringJoint2D
+
+func _process(delta):
+	update()
+	
+func _draw():
+	var color1  = Color(0,1,0)
+	var p1 = get_node(node_a).position - get_parent().position
+	var p2 = get_node(node_b).position - get_parent().position
+	var color2 = Color(1,0,0)
+	
+	var color
+	
+	if rest_length > (p2 - p1).length():
+		color = color2
+	else:
+		color = color1
+	draw_line(Vector2(0,0),p2,color)
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource( 2 )
+
+[node name="Anchor" type="StaticBody2D" parent="."]
+position = Vector2( 500, 200 )
+script = SubResource( 3 )
+
+[node name="Bob" type="RigidBody2D" parent="."]
+position = Vector2( 500, 300 )
+script = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bob"]
+shape = SubResource( 1 )
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
+position = Vector2( 500, 200 )
+node_a = NodePath("../Anchor")
+node_b = NodePath("../Bob")
+length = 200.0
+rest_length = 100.0
+script = SubResource( 5 )
+[connection signal="input_event" from="Bob" to="Bob" method="_on_Bob_input_event"]
+[connection signal="mouse_entered" from="Bob" to="Bob" method="_on_Bob_mouse_entered"]
+[connection signal="mouse_exited" from="Bob" to="Bob" method="_on_Bob_mouse_exited"]
