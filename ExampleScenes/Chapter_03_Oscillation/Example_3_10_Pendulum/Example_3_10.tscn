@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Example_3_10_Pendulum/Example_3_10.gd" type="Script" id=1]
+
+
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Oscillator" type="Node2D" parent="." groups=[
+"oscillators",
+]]
+script = ExtResource( 1 )
+origin = Vector2( 512, 0 )
+
+[node name="Oscillator2" type="Node2D" parent="Oscillator" groups=[
+"oscillators",
+]]
+script = ExtResource( 1 )
+arm_length = 200
+
+[node name="Oscillator3" type="Node2D" parent="Oscillator/Oscillator2" groups=[
+"oscillators",
+]]
+script = ExtResource( 1 )
+arm_length = 50

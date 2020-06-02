@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Exercise_3_14_PointingToMovement/Mover_3_14.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Exercise_3_14_PointingToMovement/Exercise_3_14.gd" type="Script" id=2]
+
+
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Movers" type="Node2D" parent="."]
+position = Vector2( 0, -1 )
+
+[node name="Mover" parent="Movers" instance=ExtResource( 1 )]
+position = Vector2( 0, 1 )

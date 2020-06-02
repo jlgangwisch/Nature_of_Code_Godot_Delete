@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Exercise_3_3_Car/Car.gd" type="Script" id=2]
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Car" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Car"]
+position = Vector2( -5, 0 )
+polygon = PoolVector2Array( -20, -10, 20, -10, 20, -15, 30, 0, 20, 15, 20, 10, -20, 10 )

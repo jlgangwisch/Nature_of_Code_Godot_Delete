@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Example_3_11_SpringConnection/Bob_3_11.gd" type="Script" id=1]
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Example_3_11_SpringConnection/Spring_3_11.gd" type="Script" id=2]
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Example_3_11_SpringConnection/Example_3_11.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 512, 100 )
+script = ExtResource( 3 )
+
+[node name="Bob" type="Area2D" parent="."]
+position = Vector2( 0, 200 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bob"]
+
+[node name="Spring" type="Node2D" parent="."]
+script = ExtResource( 2 )
+[connection signal="input_event" from="Bob" to="Bob" method="_on_Bob_input_event"]
+[connection signal="mouse_entered" from="Bob" to="Bob" method="_on_Bob_mouse_entered"]
+[connection signal="mouse_exited" from="Bob" to="Bob" method="_on_Bob_mouse_exited"]

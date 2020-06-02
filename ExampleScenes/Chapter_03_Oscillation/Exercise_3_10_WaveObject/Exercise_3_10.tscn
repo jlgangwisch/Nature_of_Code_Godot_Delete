@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Exercise_3_10_WaveObject/Exercise_3_10.gd" type="Script" id=1]
+
+
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Wave" type="Node2D" parent="."]
+script = ExtResource( 1 )
+oscillation_speed = 0.03
+frequency = 0.2
+period = 400
+proximity = 10
+starting_pos = Vector2( 500, 350 )
+
+[node name="Wave2" type="Node2D" parent="."]
+script = ExtResource( 1 )
+frequency = 0.05
+amplitude = 50
+period = 200
+proximity = 10
+starting_pos = Vector2( 100, 200 )

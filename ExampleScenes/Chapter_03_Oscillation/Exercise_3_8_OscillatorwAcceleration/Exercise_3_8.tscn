@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_03_Oscillation/Exercise_3_8_OscillatorwAcceleration/Exercise_3_8.gd" type="Script" id=1]
+
+
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Oscillator" type="Node2D" parent="."]
+script = ExtResource( 1 )
