@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_01_Vectors/1_8_Const_Acceleration.gd" type="Script" id=1]
+[ext_resource path="res://ExampleScenes/Chapter_01_Vectors/DrawCircle.gd" type="Script" id=2]
+
+
+
+[node name="Mover" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Circle" type="Node2D" parent="."]
+script = ExtResource( 2 )
+circle_radius = 10.375

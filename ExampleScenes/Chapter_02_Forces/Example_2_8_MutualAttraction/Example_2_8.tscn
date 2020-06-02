@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_02_Forces/Example_2_8_MutualAttraction/Example_2_8.gd" type="Script" id=1]
+[ext_resource path="res://ExampleScenes/Chapter_02_Forces/Example_2_6_Attraction/Mover_2_6.tscn" type="PackedScene" id=3]
+
+
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Movers" type="Node2D" parent="."]
+
+[node name="Mover" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover2" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover3" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover4" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover5" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover6" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover7" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover8" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover9" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover10" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover11" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover12" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover13" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover14" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover15" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover16" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover17" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover18" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover19" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover20" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover21" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover22" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover23" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover24" parent="Movers" instance=ExtResource( 3 )]
+
+[node name="Mover25" parent="Movers" instance=ExtResource( 3 )]

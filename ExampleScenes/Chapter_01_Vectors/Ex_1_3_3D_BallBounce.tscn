@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_01_Vectors/Ex_1_3_3D_BallBounce.gd" type="Script" id=1]
+
+
+
+[sub_resource type="SphereMesh" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+script = ExtResource( 1 )
+velocity = Vector3( 0.5, 1, 0.8 )
+box_extents = 20
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.933054, 0.359736, 0, -0.359736, 0.933054, -0.0144272, 4.42446, 33.0421 )
