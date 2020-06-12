@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_07_CellularAutomata/Exercise_07_09/Board_e07_09.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+z_index = 2
+script = ExtResource( 1 )
