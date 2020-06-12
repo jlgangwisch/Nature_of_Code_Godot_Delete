@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_06_AutonomousAgents/Exercise_06_01_02_03/Exercises_06_01_02_03.gd" type="Script" id=1]
+
+[node name="Exercises_06_01_02_03" type="Node2D"]
+script = ExtResource( 1 )

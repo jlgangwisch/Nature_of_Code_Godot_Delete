@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_06_AutonomousAgents/Example_06_03_StayWithinWalls/Example_06_03.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D2" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D3" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D4" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D5" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D6" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D7" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D8" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D9" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D10" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D11" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D12" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D13" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D14" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D15" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false
+
+[node name="Node2D16" type="Node2D" parent="."]
+script = ExtResource( 1 )
+show_target = false

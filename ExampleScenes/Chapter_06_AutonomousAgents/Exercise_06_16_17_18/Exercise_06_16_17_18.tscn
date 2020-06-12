@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_06_AutonomousAgents/Exercise_06_16_17_18/Flock_06_16_18.gd" type="Script" id=1]
+[ext_resource path="res://ExampleScenes/Chapter_06_AutonomousAgents/Exercise_06_16_17_18/Exercise_06_16_17_18.gd" type="Script" id=2]
+
+[node name="Exercises 16 17 18" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Flock" type="Node2D" parent="."]
+script = ExtResource( 1 )

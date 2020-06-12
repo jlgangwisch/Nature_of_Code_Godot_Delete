@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ExampleScenes/Chapter_06_AutonomousAgents/Exercise_06_06_FlowField/Flow_Field_e6_6.gd" type="Script" id=1]
+
+
+[node name="FlowField" type="Node2D"]
+script = ExtResource( 1 )
